@@ -1,0 +1,26 @@
+
+# File sistem Windows
+Thumbs.db
+Desktop.ini
+
+# File sementara editor
+.vscode/
+.idea/
+
+# File log dan cache
+*.log
+cache/
+tmp/
+
+# File konfigurasi rahasia
+.env
+.env.*
+
+# Backup database dan arsip
+*.sql
+*.zip
+*.rar
+
+# File hasil generate
+/vendor/
+/node_modules/

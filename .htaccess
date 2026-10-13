@@ -1,0 +1,16 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(?:vendor|storage)(?:/|$) - [F,END,NC]
+    RewriteRule ^includes/(?!inisialisasi\.php$) - [F,END,NC]
+    RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,END]
+</IfModule>
+
+<FilesMatch "(?i)^(basis_data\.sql|composer\.(json|lock)|PETUNJUK\.md|\.env(\..*)?|.*\.(sql|bak|old|log|ini|dist))$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always unset X-Powered-By
+</IfModule>
